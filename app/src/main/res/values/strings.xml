@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Custom Listview</string>
+    <string name="placeholder">Placeholder</string>
+    <string name="hashtag">#</string>
+</resources>

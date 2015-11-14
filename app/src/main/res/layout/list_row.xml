@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Creates a holder for all the row items
+Pulls a SELECTOR as background, which contains the different STATES of the item (pressed, cliked, etc)
+Adds padding so the items have some breathing room
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/list_selector"
+        android:padding="5dp">
+
+    <!--
+    This is where the image resides, within a LinearLayout
+    This gives the image a border once loaded.
+    -->
+    <LinearLayout android:id="@+id/thumbnail_ID"
+        android:padding="3dp"
+        android:layout_alignParentLeft="true"
+        android:background="#FFEEEADE"
+        android:layout_marginRight="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView android:id="@+id/image_ID"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+    </LinearLayout>
+
+    <!--
+    Title view, top-most text on the left
+    -->
+    <TextView android:id="@+id/title_ID"
+        android:layout_alignTop="@+id/thumbnail_ID"
+        android:text="@string/placeholder"
+        android:textSize="14sp"
+        android:textColor="#040404"
+        android:layout_toRightOf="@+id/thumbnail_ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!--
+    Author view, right under title
+    -->
+    <TextView android:id="@+id/author_ID"
+        android:text="@string/placeholder"
+        android:textColor="#e99494"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/thumbnail_ID"
+        android:layout_below="@+id/title_ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!--
+    pages number view, to the right
+    -->
+    <TextView android:id="@+id/pages_ID"
+        android:text="@string/hashtag"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/title_ID"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!--
+    play button image view, to the right
+    -->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@android:drawable/ic_media_play"/> <!-- NOT RECOMMENDED! FOR DEMO PURPOSES ONLY.
+        COPY ANY ICONS FROM ANDROID INTO THE DRAWABLE FOLDER-->
+
+</RelativeLayout>
